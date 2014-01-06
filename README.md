@@ -43,7 +43,7 @@ Array values must equal a total of 6: (1,1,2,2)
 2. Hide/Show Form - click the title to toggle the form, state is save to browser session
 
 ####HTML Markup
-The html is pretty straight-forward.  There's no need to add a bunch of crazy class names just a two will do. Check the demo for
+The html is pretty straight-forward.  There's no need to add a bunch of crazy class names just a two will do. Check the [demo](http://brendellya.com/quickgrid/) for
 reference. Just create a parent element with the classname of "row", and follow it with a div, section, article, aside element with the
 following columns classes [c1, c2, c3, c4, c5, c6]. You can use any combination as long as the row total equals 6. Easy peasy!
 
