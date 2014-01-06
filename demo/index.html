@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quick Grid - Quick, simple way to dynamically markup the web</title>
+
+	<link rel="stylesheet" href="tools/css/styles.css" />
+	<!-- Quick Grid Styles -->
+	<link rel="stylesheet" href="tools/css/grid.css" />
+	<!-- Quick Grid CSS -->
+
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!-- Quick Grid JS -->
+	<script>
+		//isDebug must equal true to enable grid
+		var gridSettings = { isDebug: true };
+	</script>
+	<script src="tools/js/quick-grid.js"></script>
+	<!-- Quick Grid JS -->
+
+</head>
+<body>
+
+<div id="container">
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<h1>Quick Grid <small>Quick, simple way to dynamically markup the web</small></h1>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<!-- Content -->
+	<div id="content">
+
+		<div class="row">
+			<div class="c1">column 1</div>
+			<div class="c1">column 2</div>
+			<div class="c1">column 3</div>
+			<div class="c1">column 4</div>
+			<div class="c1">column 5</div>
+			<div class="c1">column 6</div>
+		</div>
+
+		<div class="row">
+			<div class="c2">column 1</div>
+			<div class="c2">column 2</div>
+			<div class="c2">column 3</div>
+		</div>
+
+		<div class="row">
+			<div class="c3">column 1</div>
+			<div class="c3">column 2</div>
+		</div>
+
+		<div class="row">
+			<div class="c4">column 1</div>
+			<div class="c2">column 2</div>
+		</div>
+
+		<div class="row">
+			<div class="c1">column 1</div>
+			<div class="c5">column 2</div>
+		</div>
+
+		<div class="row">
+			<div class="c6">column 1</div>
+		</div>
+
+		<div class="row">
+			<div class="c3">column 1</div>
+			<div class="c3 row">
+				<div class="c2">Nested 1</div>
+				<div class="c2">Nested 2</div>
+				<div class="c2">Nested 3</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="c2 row">
+				<div class="c3">Nested 1</div>
+				<div class="c3">Nested 2</div>
+			</div>
+			<div class="c4 row">
+				<div class="c1">Nested 1</div>
+				<div class="c1">Nested 2</div>
+				<div class="c1">Nested 3</div>
+				<div class="c1">Nested 4</div>
+				<div class="c1">Nested 5</div>
+				<div class="c1">Nested 6</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /Content -->
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<h1>Quick Grid <small>version 0.1.0</small></h1>
+			<div class="row">
+				<section class="c4">
+					<p>Stop the madness, ditch the PSD and Illustrator grid templates.  You really don't want to open up a graphics suite every time
+					you want to use a grid...right?</p>
+
+					<p>The goal for <span class="qg">Quick Grid</span> is to eliminate the need for complicated math and cumbersome html markup. Quickly get a flexible grid
+					that you can modify dynamically on the fly -- how's that for control.</p>
+
+					<p>This grid system is based on the 1000px grid inspired by an article written by
+					<a href="http://elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/">Elliot Stocks</a> and
+					a tutorial written by <a href="http://www.creativebloq.com/web-design/create-flexible-grids-using-sass-9134524">Steve Hickey</a>.</p>
+				</section>
+				<section class="c2">
+					<p class="github"><a href="http://www.github.com/brendellya/quickgrid">Find this project on Github</a></p>
+				</section>
+			</div>
+		</div>
+	</footer>
+	<!-- /Footer -->
+</div>
+
+</body>
+</html>

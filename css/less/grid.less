@@ -1,0 +1,170 @@
+/*
+	Grid
+*/
+@import "_variables";
+@import "_mixins";
+
+/*
+	Quick Grid Styles & Elements
+*/
+#qg-error {
+	width: 100%;
+	display: block;
+	font: bold 24px Arial, non-serif;
+	color: white;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 100000;
+	background: @red;
+}
+
+#qg-settings{
+	position: fixed;
+	top: 15px;
+	right: 0;
+	z-index: 110000;
+	background: @gray50;
+	border: 1px solid @gray70;
+	border-width: 1px 0 1px 1px;
+	.border-radius-cornors(10px, 0px, 0px, 10px);
+	.box-shadow(0px, 4px, 8px, @gray80);
+
+}
+.toggle-on {
+	padding: 0 0 10px 0;
+	width: 120px;
+
+	.btn-toggle {
+		font: bold 18px/30px Georgia, serif;
+		color: @gray70;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		text-justify: right;
+
+		&:hover { color: @gray20; }
+	}
+
+
+	form {
+		margin: 0 auto;
+		width: 90px;
+		font: bold 12px/22px @bodyFont;
+	}
+
+	p { margin: 3px 0; }
+	label {
+		display: block;
+		font-size: 11px;
+		color: @white;
+		text-transform: uppercase;
+	}
+	input {
+		margin: 0;
+		padding: 0 0 0 1%;
+		width: 98%;
+		height: 22px;
+		color: @gray70;
+		text-indent: 2px;
+		background: @white;
+		border: 1px solid @gray70;
+		.box-shadow-inset(2px, 2px, 2px, @gray40);
+	}
+	select{
+		width: 100%;
+		height: 22px;
+		color: @gray70;
+		background: @white;
+		border: 1px solid @gray70;
+	}
+	input[type=submit]{
+		margin: 10px auto 2px auto;
+		width: 100%;
+		font: bold 12px/24px Georgia, serif;
+		height: 24px;
+		color: @gray70;
+		border: 1px solid @gray70;
+		.border-radius(3px);
+		.linear-gradient(@gray20, @gray50);
+
+		&:hover {
+			color: @gray70;
+			border: 1px solid @gray70;
+			.linear-gradient(@white, @gray50);
+		}
+	}
+
+	.help {
+		font-size: 10px;
+
+		strong {
+			display: none;
+			font: normal 11px/12px arial, non-serif;
+			color: @gray70;
+		}
+
+
+		&:hover{
+			strong{ display: block; }
+		}
+	}
+}
+.toggle-off{
+	padding: 1px 6px;
+	width: 50px;
+	text-align: right;
+
+	.btn-toggle {
+		font: bold 16px/14px Georgia, serif;
+		color: @gray70;
+		text-decoration: none;
+
+		&:hover { color: @gray20; }
+	}
+
+	form { display: none; }
+
+}
+
+#qg-guide {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	
+	.row { margin: auto; width: @max-width; }
+}
+
+
+/*
+	1000px Grid Styles & Configurations
+*/
+.row {
+	margin: 0 0 @gutter-width 0;
+	.box-clearfix();
+}
+
+/*
+	Column class styles
+*/
+.row .c1 { .newCol(1); }
+.row .c2 { .newCol(2); }
+.row .c3 { .newCol(3); }
+.row .c4 { .newCol(4); }
+.row .c5 { .newCol(5); }
+.row .c6 { .newCol(6); }
+
+/*
+	Column General style (modify as needed)
+*/
+.row>div,
+.row>article,
+.row>aside,
+.row>section {
+	float: left;
+	.box-sizing();
+
+	&:first-child { margin: 0; }
+}
+

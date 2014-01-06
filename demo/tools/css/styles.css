@@ -1,0 +1,418 @@
+/*
+	Grid Variables
+*/
+/*
+	B/W Color Scale
+*/
+/*
+	Web Variables
+	Following variables can be overwritten or deleted
+*/
+/*
+	Typography
+*/
+@font-face {
+  font-family: archistico;
+  src: url("/quickgrid/tools/font/Archistico_Simple.ttf");
+}
+@font-face {
+  font-family: archisticoB;
+  src: url("/quickgrid/tools/font/Archistico_Bold.ttf");
+}
+/*
+	MIXINS
+*/
+/*
+	GRID
+*/
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {
+  max-width: 100%;
+}
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+.ie6 input {
+  vertical-align: text-bottom;
+}
+select,
+input,
+textarea {
+  font: 99% sans-serif;
+}
+table {
+  font-size: inherit;
+  font: 100%;
+}
+small {
+  font-size: 85%;
+}
+strong {
+  font-weight: bold;
+}
+td,
+td img {
+  vertical-align: top;
+}
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* standardize any monospaced elements */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+/* make buttons play nice in IE */
+button {
+  width: auto;
+  overflow: visible;
+}
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+/* prevent BG image flicker upon hover *
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true)); }
+*/
+/* let's clear some floats */
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  background: #e6e6e6;
+}
+#container {
+  width: 100%;
+}
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+header {
+  height: 60px;
+  background: #000000;
+}
+header h1 {
+  font: normal 36px/60px archisticoB, Georgia, serif;
+  color: #b3b3b3;
+}
+header small {
+  margin: 0 10px;
+  font: normal 16px Georgia, serif;
+  color: #ffffff;
+}
+#content {
+  margin: 20px auto;
+  width: 90%;
+}
+#content .row > div,
+#content .row > section,
+#content .row > article {
+  height: 60px;
+  font: bold 14px/60px Arial, non-serif;
+  color: #e6e6e6;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+#content .c1 {
+  background: goldenrod;
+}
+#content .c2 {
+  background: teal;
+}
+#content .c3 {
+  background: purple;
+}
+#content .c4 {
+  background: magenta;
+}
+#content .c5 {
+  background: seagreen;
+}
+#content .c6 {
+  background: cornflowerblue;
+}
+footer {
+  padding: 20px 0;
+  width: 100%;
+  font: normal 14px/18px Georgia, serif;
+  color: #ffffff;
+  background: #666666;
+}
+footer a {
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px dashed #333333;
+}
+footer a:hover {
+  color: #ffffff;
+  border-bottom: 1px dashed #ffffff;
+}
+footer .qg {
+  font-family: archisticoB;
+  color: #b3b3b3;
+}
+footer h1 {
+  font: normal 20px/24px archisticoB, Georgia, serif;
+  color: #b3b3b3;
+}
+footer h1 small {
+  font: normal 12px/24px Georgia, serif;
+  color: #333333;
+}
+footer p {
+  margin: 10px 0;
+}
+footer .github a {
+  height: 40px;
+  display: block;
+  font: bold 16px/40px Georgia, serif;
+  color: #666666;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  background: #999999;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  box-shadow: 2px 2px 4px #4d4d4d;
+  -webkit-box-shadow: 2px 2px 4px #4d4d4d;
+  -moz-box-shadow: 2px 2px 4px #4d4d4d;
+  background: -moz-linear-gradient(top, #999999 0%, #808080 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #999999), color-stop(100%, #808080));
+  background: -webkit-linear-gradient(top, #999999 0%, #808080 100%);
+  background: linear-gradient(top, #999999 0%, #808080 100%);
+  text-shadow: 1px 1px 0 #b3b3b3, -1px -1px 0 #4d4d4d;
+  -moz-text-shadow: 1px 1px 0 #b3b3b3, -1px -1px 0 #4d4d4d;
+  -webkit-text-shadow: 1px 1px 0 #b3b3b3, -1px -1px 0 #4d4d4d;
+}
+footer .github a:hover {
+  background: -moz-linear-gradient(top, #b3b3b3 0%, #808080 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3b3b3), color-stop(100%, #808080));
+  background: -webkit-linear-gradient(top, #b3b3b3 0%, #808080 100%);
+  background: linear-gradient(top, #b3b3b3 0%, #808080 100%);
+}

@@ -1,0 +1,217 @@
+/*
+	Grid
+*/
+/*
+	Grid Variables
+*/
+/*
+	B/W Color Scale
+*/
+/*
+	Web Variables
+	Following variables can be overwritten or deleted
+*/
+/*
+	MIXINS
+*/
+/*
+	GRID
+*/
+/*
+	Quick Grid Styles & Elements
+*/
+#qg-error {
+  width: 100%;
+  display: block;
+  font: bold 24px Arial, non-serif;
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+  background: #ff0000;
+}
+#qg-settings {
+  position: fixed;
+  top: 15px;
+  right: 0;
+  z-index: 110000;
+  background: #808080;
+  border: 1px solid #4d4d4d;
+  border-width: 1px 0 1px 1px;
+  border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  box-shadow: 0px 4px 8px #333333;
+  -webkit-box-shadow: 0px 4px 8px #333333;
+  -moz-box-shadow: 0px 4px 8px #333333;
+}
+.toggle-on {
+  padding: 0 0 10px 0;
+  width: 120px;
+}
+.toggle-on .btn-toggle {
+  font: bold 18px/30px Georgia, serif;
+  color: #4d4d4d;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-justify: right;
+}
+.toggle-on .btn-toggle:hover {
+  color: #cccccc;
+}
+.toggle-on form {
+  margin: 0 auto;
+  width: 90px;
+  font: bold 12px/22px Georgia, serif;
+}
+.toggle-on p {
+  margin: 3px 0;
+}
+.toggle-on label {
+  display: block;
+  font-size: 11px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.toggle-on input {
+  margin: 0;
+  padding: 0 0 0 1%;
+  width: 98%;
+  height: 22px;
+  color: #4d4d4d;
+  text-indent: 2px;
+  background: #ffffff;
+  border: 1px solid #4d4d4d;
+  box-shadow: 2px 2px 2px #999999 inset;
+  -webkit-box-shadow: 2px 2px 2px #999999 inset;
+  -moz-box-shadow: 2px 2px 2px #999999 inset;
+}
+.toggle-on select {
+  width: 100%;
+  height: 22px;
+  color: #4d4d4d;
+  background: #ffffff;
+  border: 1px solid #4d4d4d;
+}
+.toggle-on input[type=submit] {
+  margin: 10px auto 2px auto;
+  width: 100%;
+  font: bold 12px/24px Georgia, serif;
+  height: 24px;
+  color: #4d4d4d;
+  border: 1px solid #4d4d4d;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background: -moz-linear-gradient(top, #cccccc 0%, #808080 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, #808080));
+  background: -webkit-linear-gradient(top, #cccccc 0%, #808080 100%);
+  background: linear-gradient(top, #cccccc 0%, #808080 100%);
+}
+.toggle-on input[type=submit]:hover {
+  color: #4d4d4d;
+  border: 1px solid #4d4d4d;
+  background: -moz-linear-gradient(top, #ffffff 0%, #808080 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #808080));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #808080 100%);
+  background: linear-gradient(top, #ffffff 0%, #808080 100%);
+}
+.toggle-on .help {
+  font-size: 10px;
+}
+.toggle-on .help strong {
+  display: none;
+  font: normal 11px/12px arial, non-serif;
+  color: #4d4d4d;
+}
+.toggle-on .help:hover strong {
+  display: block;
+}
+.toggle-off {
+  padding: 1px 6px;
+  width: 50px;
+  text-align: right;
+}
+.toggle-off .btn-toggle {
+  font: bold 16px/14px Georgia, serif;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+.toggle-off .btn-toggle:hover {
+  color: #cccccc;
+}
+.toggle-off form {
+  display: none;
+}
+#qg-guide {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+#qg-guide .row {
+  margin: auto;
+  width: 90%;
+}
+/*
+	1000px Grid Styles & Configurations
+*/
+.row {
+  margin: 0 0 2% 0;
+  zoom: 1;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+/*
+	Column class styles
+*/
+.row .c1 {
+  width: 15%;
+  margin-left: 2%;
+}
+.row .c2 {
+  width: 32%;
+  margin-left: 2%;
+}
+.row .c3 {
+  width: 49%;
+  margin-left: 2%;
+}
+.row .c4 {
+  width: 66%;
+  margin-left: 2%;
+}
+.row .c5 {
+  width: 83%;
+  margin-left: 2%;
+}
+.row .c6 {
+  width: 100%;
+  margin-left: 2%;
+}
+/*
+	Column General style (modify as needed)
+*/
+.row > div,
+.row > article,
+.row > aside,
+.row > section {
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.row > div:first-child,
+.row > article:first-child,
+.row > aside:first-child,
+.row > section:first-child {
+  margin: 0;
+}

@@ -1,0 +1,94 @@
+
+@import "_variables";
+@import "_typography";
+@import "_mixins";
+@import "_global";
+
+html,body { width: 100%; height: 100%; }
+
+body {
+	width: 100%;
+	background: @gray10;
+}
+
+#container { width: 100%; }
+.container { margin: 0 auto; width: @max-width; }
+
+
+header {
+	height: 60px;
+	background: @black;
+
+	h1 {
+		font: normal 36px/60px archisticoB, Georgia, serif;
+		color: @gray30;
+	}
+
+	small {
+		margin: 0 10px;
+		font: normal 16px @bodyFont;
+		color: @white;
+	}
+}
+
+#content {
+	margin: 20px auto;
+	width: @max-width;
+
+	.row>div,
+	.row>section,
+	.row>article {
+		height: 60px;
+		font: bold 14px/60px Arial, non-serif;
+		color: @gray10;
+		text-align: center;
+		text-transform: uppercase;
+		vertical-align: middle;
+		}
+
+	.c1 { background: goldenrod; }
+	.c2 { background: teal; }
+	.c3 { background: purple; }
+	.c4 { background: magenta; }
+	.c5 { background: seagreen; }
+	.c6 { background: cornflowerblue; }
+}
+
+
+footer {
+	padding: 20px 0;
+	width: 100%;
+	font: normal 14px/18px Georgia, serif;
+	color: @white;
+	background: @gray60;
+
+	a {color: @gray80; text-decoration: none; border-bottom: 1px dashed @gray80; }
+	a:hover { color: @white; border-bottom: 1px dashed @white; }
+	.qg { font-family: archisticoB; color: @gray30; }
+
+	h1{
+		font: normal 20px/24px archisticoB, Georgia, serif;
+		color: @gray30;
+
+		small { font: normal 12px/24px Georgia, serif; color: @gray80; }
+	}
+	p { margin: 10px 0; }
+	.github a {
+		height: 40px;
+		display: block;
+		font: bold 16px/40px Georgia, serif;
+		color: @gray60;
+		letter-spacing: 1px;
+		text-align: center;
+		text-decoration: none;
+		background: @gray40;
+		border: 1px solid @gray70;
+		.border-radius();
+		.box-shadow(2px, 2px, 4px, @gray70);
+		.linear-gradient(@gray40, @gray50);
+		.text-inset(@gray30, @gray70);
+
+		&:hover { .linear-gradient(@gray30, @gray50); }
+	}
+
+}
