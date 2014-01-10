@@ -200,18 +200,12 @@
 /*
 	Column General style (modify as needed)
 */
-.row > div,
-.row > article,
-.row > aside,
-.row > section {
+.row > * {
   float: left;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-.row > div:first-child,
-.row > article:first-child,
-.row > aside:first-child,
-.row > section:first-child {
+.row > *:first-child {
   margin: 0;
 }
