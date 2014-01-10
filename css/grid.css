@@ -56,7 +56,6 @@
   display: block;
   text-align: center;
   text-decoration: none;
-  text-justify: right;
 }
 .toggle-on .btn-toggle:hover {
   color: #cccccc;
@@ -159,7 +158,8 @@
 	1000px Grid Styles & Configurations
 */
 .row {
-  margin: 0 0 2% 0;
+  margin: 0 auto 2% auto;
+  width: 90%;
   zoom: 1;
 }
 .row:before,

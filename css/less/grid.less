@@ -41,7 +41,6 @@
 		display: block;
 		text-align: center;
 		text-decoration: none;
-		text-justify: right;
 
 		&:hover { color: @gray20; }
 	}
@@ -141,7 +140,8 @@
 	1000px Grid Styles & Configurations
 */
 .row {
-	margin: 0 0 @gutter-width 0;
+	margin: 0 auto @gutter-width auto;
+	width: @max-width;
 	.box-clearfix();
 }
 
