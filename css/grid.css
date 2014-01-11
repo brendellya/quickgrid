@@ -209,3 +209,6 @@
 .row > *:first-child {
   margin: 0;
 }
+.row > * .row {
+  width: 100%;
+}

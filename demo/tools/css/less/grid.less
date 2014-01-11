@@ -158,13 +158,12 @@
 /*
 	Column General style (modify as needed)
 */
-.row>div,
-.row>article,
-.row>aside,
-.row>section {
+.row>* {
 	float: left;
 	.box-sizing();
 
 	&:first-child { margin: 0; }
+
+	.row { width: @nested-width; }
 }
 
