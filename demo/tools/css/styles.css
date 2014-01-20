@@ -354,6 +354,9 @@ header small {
 #content .c6 {
   background: cornflowerblue;
 }
+#content .c0-5 {
+  background: #808080;
+}
 footer {
   padding: 20px 0;
   width: 100%;

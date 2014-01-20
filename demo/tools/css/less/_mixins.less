@@ -53,9 +53,9 @@
 	-webkit-text-shadow: @x @y @offset @color;
 }
 .text-inset (@hColor: @hilite, @sColor: @shadow){
-	text-shadow:  1px 1px 0 @hColor, -1px -1px 0 @sColor;
-	-moz-text-shadow:  1px 1px 0 @hColor, -1px -1px 0 @sColor;
-	-webkit-text-shadow:  1px 1px 0 @hColor, -1px -1px 0 @sColor;
+	text-shadow: 1px 1px 0 @hColor, -1px -1px 0 @sColor;
+	-moz-text-shadow: 1px 1px 0 @hColor, -1px -1px 0 @sColor;
+	-webkit-text-shadow: 1px 1px 0 @hColor, -1px -1px 0 @sColor;
 }
 
 
@@ -63,11 +63,10 @@
 /*
 	GRID
 */
-//.max (@a; @b) when (@a > @b) { width: @a }
 .newCol(@total: 1){
-	//@col: (@totalcolumn + @gutters) * @total - @gutters;
 	@col: (@column-width + @gutter-width) * @total - @gutter-width;
 
 	width: @col;
 	margin-left: @gutter-width;
+	margin-bottom: @gutter-width;
 }

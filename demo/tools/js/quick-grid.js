@@ -1,5 +1,5 @@
 /**
- * Quick Guide v 0.1.0
+ * Quick Guide v 0.1.1
  * Created by brendellya on 12/27/13.
  */
 var gridSettings = gridSettings || {};
@@ -143,7 +143,7 @@ var gridSettings = gridSettings || {};
     getColumnTotal: function (arr) {
       var result = 0;
       for (var i = 0; i < arr.length; i++) {
-        result += parseInt(arr[i], 10);
+        result += parseFloat(arr[i]);
       }
       return result;
     },
@@ -166,7 +166,7 @@ var gridSettings = gridSettings || {};
       //single value - convert to column array (ex 2 = [3,3])
       if (arr.length === 1) {
 
-        //test if multiple of 6
+        //test single value is multiple of 6
         valid = (qGrid.maxColums % arr[0] === 0) ? arr[0] : false;
 
         if (valid) {
@@ -200,8 +200,8 @@ var gridSettings = gridSettings || {};
         colVal,
         err;
 
-      //change column array values from string to int, rounded down
-      cArr = cArr.map(Math.floor);
+      //change column array values from string to int, now supporting floats
+      cArr = cArr.map(function(x){ return parseFloat(x); });
 
       //create new array with column widths
       gridArr = qGrid.createColumnArray(cArr);
@@ -228,11 +228,16 @@ var gridSettings = gridSettings || {};
       var rColor = qGrid.settingsObj.color || qGrid.defaultColor,
         rOpacity = qGrid.settingsObj.opacity || qGrid.defaultOpacity,
         rIndex = qGrid.settingsObj.arrange || "-1",
-        _row = $("<div />", { "class": "row" });
+        _row = $("<div />", { "class": "row" }),
+        rClass;
 
       //create new column element and append to _row
       for (var i = 0; i < arr.length; i++) {
-        $("<div />", { "class": "c" + arr[i], css: {
+
+        //change floats from decimal to hyphenated string for css validity
+        rClass  = arr[i].toString().replace(".", "-");
+
+        $("<div />", { "class": "c" + rClass, css: {
           height: qGrid.getScrollHeight() + "px",
           background: rColor,
           opacity: rOpacity

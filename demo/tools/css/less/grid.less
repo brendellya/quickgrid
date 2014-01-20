@@ -5,6 +5,62 @@
 @import "_mixins";
 
 /*
+	1000px Grid Styles & Configurations
+*/
+.row {
+	margin: 0 auto;
+	width: @max-width;
+	.box-clearfix();
+	.box-sizing();
+}
+
+/*
+	Column class styles
+*/
+.row .c1 { .newCol(1); }
+.row .c2 { .newCol(2); }
+.row .c3 { .newCol(3); }
+.row .c4 { .newCol(4); }
+.row .c5 { .newCol(5); }
+.row .c6 { .newCol(6); }
+
+.row .c0-5 { .newCol(0.5); }
+.row .c1-5 { .newCol(1.5); }
+.row .c2-5 { .newCol(2.5); }
+.row .c3-5 { .newCol(3.5); }
+.row .c4-5 { .newCol(4.5); }
+.row .c5-5 { .newCol(5.5); }
+
+.flush .c1,
+.flush .c2,
+.flush .c3,
+.flush .c4,
+.flush .c5,
+.flush .c6
+{ margin-bottom: 0; }
+
+.flush .c0-5,
+.flush .c1-5,
+.flush .c2-5,
+.flush .c3-5,
+.flush .c4-5,
+.flush .c5-5
+{ margin-bottom: 0; }
+
+/*
+	Column General style (modify as needed)
+*/
+.row>* {
+	float: left;
+	.box-sizing();
+
+	&:first-child { margin-left: 0; }
+
+	.row { width: @nested-width; }
+}
+//todo consider global padding var
+
+/*
 	Quick Grid Styles & Elements
 */
 #qg-error {
@@ -131,39 +187,6 @@
 	position: absolute;
 	top: 0;
 	z-index: -1;
-	
+
 	.row { margin: auto; width: @max-width; }
 }
-
-
-/*
-	1000px Grid Styles & Configurations
-*/
-.row {
-	margin: 0 auto @gutter-width auto;
-	width: @max-width;
-	.box-clearfix();
-}
-
-/*
-	Column class styles
-*/
-.row .c1 { .newCol(1); }
-.row .c2 { .newCol(2); }
-.row .c3 { .newCol(3); }
-.row .c4 { .newCol(4); }
-.row .c5 { .newCol(5); }
-.row .c6 { .newCol(6); }
-
-/*
-	Column General style (modify as needed)
-*/
-.row>* {
-	float: left;
-	.box-sizing();
-
-	&:first-child { margin: 0; }
-
-	.row { width: @nested-width; }
-}
-
