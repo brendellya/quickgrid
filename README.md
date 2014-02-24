@@ -33,8 +33,8 @@ references on code complete.</em>
 ###Customizations
 
 Static or Responsive(somewhat):
-@max-width: 90%;
-LESS Changes (set to 90% by default but can be change to an absolute value such as 1000px)
+@max-width: 100%;
+LESS Changes (set to 100% by default but can be change to an any percentage or absolute value such as 80% / 1000px)
 
 ####Settings Form
 1. Columns - can be a single digit or comma-seperate list.
